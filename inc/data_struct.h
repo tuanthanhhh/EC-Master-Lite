@@ -1,0 +1,12 @@
+#ifndef DATA_STRUCT_H
+#define DATA_STRUCT_H
+
+enum TestList
+{
+    ECAT_IN_TEST,
+    ECAT_OUT_TEST,
+    CHECK_ADDRESS_TEST,
+    WRITE_SERIAL_NUMBER_TEST,
+    ON_OFF_VALVE_TEST
+};
+#endif // DATA_STRUCT_H

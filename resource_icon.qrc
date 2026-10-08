@@ -9,5 +9,7 @@
         <file>img/warning.png</file>
         <file>img/logo.png</file>
         <file>img/check.png</file>
+        <file>img/start_button.png</file>
+        <file>img/stop_button.png</file>
     </qresource>
 </RCC>

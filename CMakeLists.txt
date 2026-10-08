@@ -61,12 +61,14 @@ file(GLOB SOEM_HEADERS
    ${CMAKE_SOURCE_DIR}/oshw/wpcap/Include/pcap/*.h
    ${CMAKE_SOURCE_DIR}/osal/*.h
    ${CMAKE_SOURCE_DIR}/inc/*.h
+   ${CMAKE_SOURCE_DIR}/lib/*.h
 )
 file(GLOB SOEM_SOURCES
     ${CMAKE_SOURCE_DIR}/soem/*.cpp
     ${CMAKE_SOURCE_DIR}/src/*.cpp
     ${CMAKE_SOURCE_DIR}/osal/*.cpp
     ${CMAKE_SOURCE_DIR}/oshw/*.cpp
+    ${CMAKE_SOURCE_DIR}/lib/*.cpp
 )
 
 file(GLOB FORM_HEADERS
@@ -94,6 +96,7 @@ set(PROJECT_SOURCES
 
 include_directories(${CMAKE_SOURCE_DIR})
 include_directories(${CMAKE_SOURCE_DIR}/inc)
+include_directories(${CMAKE_SOURCE_DIR}/lib)
 include_directories(${CMAKE_SOURCE_DIR}/soem)
 include_directories(${CMAKE_SOURCE_DIR}/oshw)
 include_directories(${CMAKE_SOURCE_DIR}/oshw/wpcap/Include)
@@ -106,6 +109,15 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         resource_icon.qrc
+        inc/ec_control.h
+        src/ec_control.cpp
+
+
+        inc/ec_info.h
+        src/ec_info.cpp
+        inc/Global_Variable.h
+        src/Global_Variable.cpp
+        inc/data_struct.h
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET EC_Master_Lite APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
