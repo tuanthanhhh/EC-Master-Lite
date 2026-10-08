@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/color-wheel.png</file>
+        <file>img/Ecat.ico</file>
+        <file>img/Error.png</file>
+        <file>img/information.png</file>
+        <file>img/remove.png</file>
+        <file>img/setting.png</file>
+        <file>img/warning.png</file>
+        <file>img/logo.png</file>
+        <file>img/check.png</file>
+    </qresource>
+</RCC>
