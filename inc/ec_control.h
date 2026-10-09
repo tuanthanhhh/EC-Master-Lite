@@ -33,8 +33,11 @@ extern int Lost_frame_cnt;
 extern int polling_rate;
 
 extern uint8_t slave_state_request[EC_MAXSLAVE];
+extern bool slave_disconnect[EC_MAXSLAVE];
 
 extern bool Is_testing;
+extern bool rescan_slave;
+extern bool slave_reconnecting;
 typedef struct
 {
     uint16_t PDO_count;

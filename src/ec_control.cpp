@@ -31,8 +31,10 @@ bool Is_ECAT_Init = false;
 bool Is_stop_thread = false;
 volatile uint8_t EC_state = STOP;
 uint8_t slave_state_request[EC_MAXSLAVE] = {EC_STATE_INIT};
-
+bool slave_disconnect[EC_MAXSLAVE] = {false};
 bool Is_testing = false;
+bool rescan_slave;
+bool slave_reconnecting = false;
 
 char* dtype2string(uint16 dtype, uint16 bitlen)
 {

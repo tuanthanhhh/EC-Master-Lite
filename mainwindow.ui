@@ -401,7 +401,7 @@ QFrame#infoFrame {
                 </size>
                </property>
                <property name="text">
-                <string/>
+                <string>0xFFF</string>
                </property>
               </widget>
              </item>
@@ -482,7 +482,7 @@ QFrame#infoFrame {
               </spacer>
              </item>
              <item alignment="Qt::AlignmentFlag::AlignVCenter">
-              <widget class="QLineEdit" name="lineEdit_2">
+              <widget class="QLineEdit" name="Write_SerialNumber_textBox">
                <property name="minimumSize">
                 <size>
                  <width>150</width>
@@ -490,7 +490,7 @@ QFrame#infoFrame {
                 </size>
                </property>
                <property name="text">
-                <string/>
+                <string>342600001</string>
                </property>
               </widget>
              </item>
@@ -638,17 +638,38 @@ QFrame#infoFrame {
             <property name="verticalSpacing">
              <number>4</number>
             </property>
-            <item row="0" column="1">
-             <widget class="QLabel" name="label_8">
+            <item row="7" column="1">
+             <widget class="QLineEdit" name="AL_Status_Code_Slave1_textBox">
               <property name="text">
-               <string>IN PORT (Port 0)</string>
+               <string/>
               </property>
              </widget>
             </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="label_25">
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="Rx_Error_Slave1_textBox">
               <property name="text">
-               <string>State:</string>
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1">
+             <widget class="QLineEdit" name="Rx_Tx_Frame_Slave1_textBox">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="label_48">
+              <property name="text">
+               <string>Rx/Tx Frames:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="Link_State_Slave1_textBox">
+              <property name="text">
+               <string/>
               </property>
              </widget>
             </item>
@@ -671,6 +692,13 @@ QFrame#infoFrame {
               </property>
              </widget>
             </item>
+            <item row="5" column="1">
+             <widget class="QLineEdit" name="Link_Lost_Slave1_textBox">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
             <item row="2" column="0">
              <widget class="QLabel" name="label_26">
               <property name="text">
@@ -678,31 +706,10 @@ QFrame#infoFrame {
               </property>
              </widget>
             </item>
-            <item row="2" column="1">
-             <widget class="QLineEdit" name="Link_State_Slave1_textBox">
+            <item row="0" column="1">
+             <widget class="QLabel" name="label_8">
               <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="0">
-             <widget class="QLabel" name="label_22">
-              <property name="text">
-               <string>Rx Errors:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="1">
-             <widget class="QLineEdit" name="Rx_Error_Slave1_textBox">
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="4" column="0">
-             <widget class="QLabel" name="label_23">
-              <property name="text">
-               <string>Forw Errors:</string>
+               <string>IN PORT (Port 0)</string>
               </property>
              </widget>
             </item>
@@ -713,6 +720,13 @@ QFrame#infoFrame {
               </property>
              </widget>
             </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_25">
+              <property name="text">
+               <string>State:</string>
+              </property>
+             </widget>
+            </item>
             <item row="5" column="0">
              <widget class="QLabel" name="label_24">
               <property name="text">
@@ -720,52 +734,24 @@ QFrame#infoFrame {
               </property>
              </widget>
             </item>
-            <item row="5" column="1">
-             <widget class="QLineEdit" name="Link_Lost_Slave1_textBox">
+            <item row="3" column="0">
+             <widget class="QLabel" name="label_22">
               <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="6" column="0">
-             <widget class="QLabel" name="label_40">
-              <property name="text">
-               <string>CRC Errors:</string>
+               <string>Rx Errors:</string>
               </property>
              </widget>
             </item>
             <item row="7" column="0">
-             <widget class="QLabel" name="label_48">
-              <property name="text">
-               <string>Rx/Tx Frames:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="7" column="1">
-             <widget class="QLineEdit" name="Rx_Tx_Frame_Slave1_textBox">
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="8" column="0">
              <widget class="QLabel" name="label_49">
               <property name="text">
                <string>AL Status Code:</string>
               </property>
              </widget>
             </item>
-            <item row="8" column="1">
-             <widget class="QLineEdit" name="AL_Status_Code_Slave1_textBox">
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_23">
               <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="6" column="1">
-             <widget class="QLineEdit" name="CRC_Errors_Slave1_textBox">
-              <property name="text">
-               <string/>
+               <string>Forw Errors:</string>
               </property>
              </widget>
             </item>
@@ -784,31 +770,17 @@ QFrame#infoFrame {
             <property name="verticalSpacing">
              <number>4</number>
             </property>
-            <item row="4" column="0">
-             <widget class="QLabel" name="label_64">
+            <item row="5" column="0">
+             <widget class="QLabel" name="label_65">
               <property name="text">
-               <string>Forw Errors:</string>
+               <string>Link Lost:</string>
               </property>
              </widget>
             </item>
-            <item row="6" column="1">
-             <widget class="QLineEdit" name="CRC_Error_Slave2_textBox">
+            <item row="7" column="1">
+             <widget class="QLineEdit" name="AL_Status_Code_Slave2_textBox">
               <property name="text">
                <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <widget class="QLabel" name="label_62">
-              <property name="text">
-               <string>Link State:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QLabel" name="label_60">
-              <property name="text">
-               <string>OUT PORT (Port 1)</string>
               </property>
              </widget>
             </item>
@@ -819,10 +791,10 @@ QFrame#infoFrame {
               </property>
              </widget>
             </item>
-            <item row="8" column="1">
-             <widget class="QLineEdit" name="AL_Status_Code_Slave2_textBox">
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_62">
               <property name="text">
-               <string/>
+               <string>Link State:</string>
               </property>
              </widget>
             </item>
@@ -833,24 +805,17 @@ QFrame#infoFrame {
               </property>
              </widget>
             </item>
-            <item row="8" column="0">
-             <widget class="QLabel" name="label_68">
+            <item row="0" column="1">
+             <widget class="QLabel" name="label_60">
               <property name="text">
-               <string>AL Status Code:</string>
+               <string>OUT PORT (Port 1)</string>
               </property>
              </widget>
             </item>
-            <item row="6" column="0">
-             <widget class="QLabel" name="label_66">
+            <item row="3" column="0">
+             <widget class="QLabel" name="label_63">
               <property name="text">
-               <string>CRC Errors:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="1">
-             <widget class="QLineEdit" name="Rx_Error_Slave2_textBox">
-              <property name="text">
-               <string/>
+               <string>Rx Errors:</string>
               </property>
              </widget>
             </item>
@@ -861,24 +826,17 @@ QFrame#infoFrame {
               </property>
              </widget>
             </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="label_68">
+              <property name="text">
+               <string>AL Status Code:</string>
+              </property>
+             </widget>
+            </item>
             <item row="5" column="1">
              <widget class="QLineEdit" name="Link_Lost_Slave2_textBox">
               <property name="text">
                <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="7" column="1">
-             <widget class="QLineEdit" name="Rx_Tx_Frame_Slave2_textBox">
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="5" column="0">
-             <widget class="QLabel" name="label_65">
-              <property name="text">
-               <string>Link Lost:</string>
               </property>
              </widget>
             </item>
@@ -889,17 +847,31 @@ QFrame#infoFrame {
               </property>
              </widget>
             </item>
-            <item row="7" column="0">
-             <widget class="QLabel" name="label_67">
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="Rx_Error_Slave2_textBox">
               <property name="text">
-               <string>Rx/Tx Frames:</string>
+               <string/>
               </property>
              </widget>
             </item>
-            <item row="3" column="0">
-             <widget class="QLabel" name="label_63">
+            <item row="6" column="1">
+             <widget class="QLineEdit" name="Rx_Tx_Frame_Slave2_textBox">
               <property name="text">
-               <string>Rx Errors:</string>
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_64">
+              <property name="text">
+               <string>Forw Errors:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="label_67">
+              <property name="text">
+               <string>Rx/Tx Frames:</string>
               </property>
              </widget>
             </item>
@@ -976,7 +948,7 @@ QFrame#infoFrame {
                </property>
               </widget>
              </item>
-             <item row="0" column="0" alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+             <item row="0" column="0" alignment="Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter">
               <widget class="QLabel" name="Test_Status_Icon">
                <property name="text">
                 <string/>
@@ -1063,10 +1035,7 @@ QFrame#infoFrame {
     <item>
      <widget class="QPlainTextEdit" name="Log_textBox">
       <property name="plainText">
-       <string>16:20:12	=========================
-16:20:12	Start test (selected items: 1, 2, 3, 4, 5)
-16:20:12	[1] Check ECAT IN ...
-16:20:12	[2] Check ECAT OUT ...</string>
+       <string/>
       </property>
      </widget>
     </item>

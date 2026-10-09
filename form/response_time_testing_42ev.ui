@@ -1,0 +1,1856 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>response_time_testing_42ev</class>
+ <widget class="QWidget" name="response_time_testing_42ev">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1770</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Response Time 42EV Testing</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(246, 245, 244);
+selection-background-color: rgb(28, 113, 216);
+selection-color: rgb(255, 255, 255);
+font: 9pt &quot;Ubuntu Sans&quot;;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_7" stretch="11,5">
+   <item>
+    <layout class="QGridLayout" name="gridLayout_5">
+     <item row="0" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="2,3">
+       <item>
+        <widget class="QComboBox" name="slave_comboBox_1">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+selection-color: rgb(0, 0, 0);
+selection-background-color: rgb(246, 245, 244);</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,3">
+       <item>
+        <widget class="QComboBox" name="slave_comboBox_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+selection-color: rgb(0, 0, 0);
+selection-background-color: rgb(246, 245, 244);</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="2">
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,3">
+       <item>
+        <widget class="QComboBox" name="slave_comboBox_3">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+selection-color: rgb(0, 0, 0);
+selection-background-color: rgb(246, 245, 244);</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="0">
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string>Valve Information</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,6,1,6" columnstretch="1,1">
+          <property name="horizontalSpacing">
+           <number>20</number>
+          </property>
+          <item row="0" column="0" alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Valve Control</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Valve Readback</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QTableWidget" name="Valve_Control_TableWidget_1">
+            <property name="layoutDirection">
+             <enum>Qt::LayoutDirection::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored</enum>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>30</number>
+            </attribute>
+            <attribute name="horizontalHeaderHighlightSections">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>25</number>
+            </attribute>
+            <attribute name="verticalHeaderStretchLastSection">
+             <bool>false</bool>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>Valve 1 to 8</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 9 to 16</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 17 to 24</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 25 to 32</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 33 to 40</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 41 to 42</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>08</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>07</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>06</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>05</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>04</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>03</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>02</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>01</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QTableWidget" name="Valve_Readback_TableWidget_1">
+            <property name="layoutDirection">
+             <enum>Qt::LayoutDirection::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored</enum>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>30</number>
+            </attribute>
+            <attribute name="horizontalHeaderHighlightSections">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>25</number>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>Valve 1 to 8</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 9 to 16</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 17 to 24</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 25 to 32</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 33 to 40</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 41 to 42</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>08</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>07</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>06</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>05</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>04</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>03</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>02</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>01</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="2" column="0" alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>DI/DO response ON time</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>DI/DO response OFF time</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QTableWidget" name="Response_On_Time_TableWidget_1">
+            <property name="layoutDirection">
+             <enum>Qt::LayoutDirection::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored</enum>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>30</number>
+            </attribute>
+            <attribute name="horizontalHeaderHighlightSections">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>25</number>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>Valve 1 to 8</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 9 to 16</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 17 to 24</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 25 to 32</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 33 to 40</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 41 to 42</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>08</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>07</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>06</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>05</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>04</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>03</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>02</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>01</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QTableWidget" name="Response_Off_Time_TableWidget_1">
+            <property name="layoutDirection">
+             <enum>Qt::LayoutDirection::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored</enum>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>30</number>
+            </attribute>
+            <attribute name="horizontalHeaderHighlightSections">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>25</number>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>Valve 1 to 8</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 9 to 16</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 17 to 24</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 25 to 32</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 33 to 40</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 41 to 42</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>08</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>07</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>06</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>05</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>04</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>03</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>02</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>01</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="title">
+        <string>Valve Information</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QGridLayout" name="gridLayout_3" rowstretch="1,6,1,6" columnstretch="1,1">
+          <property name="horizontalSpacing">
+           <number>20</number>
+          </property>
+          <item row="0" column="0" alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>Valve Control</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QLabel" name="label_11">
+            <property name="text">
+             <string>Valve Readback</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QTableWidget" name="Valve_Control_TableWidget_2">
+            <property name="layoutDirection">
+             <enum>Qt::LayoutDirection::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored</enum>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>30</number>
+            </attribute>
+            <attribute name="horizontalHeaderHighlightSections">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>25</number>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>Valve 1 to 8</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 9 to 16</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 17 to 24</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 25 to 32</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 33 to 40</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 41 to 42</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>08</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>07</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>06</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>05</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>04</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>03</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>02</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>01</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QTableWidget" name="Valve_Readback_TableWidget_2">
+            <property name="layoutDirection">
+             <enum>Qt::LayoutDirection::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored</enum>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>30</number>
+            </attribute>
+            <attribute name="horizontalHeaderHighlightSections">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>25</number>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>Valve 1 to 8</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 9 to 16</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 17 to 24</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 25 to 32</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 33 to 40</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 41 to 42</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>08</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>07</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>06</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>05</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>04</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>03</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>02</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>01</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="2" column="0" alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QLabel" name="label_12">
+            <property name="text">
+             <string>DI/DO response ON time</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QLabel" name="label_13">
+            <property name="text">
+             <string>DI/DO response OFF time</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QTableWidget" name="Response_On_Time_TableWidget_2">
+            <property name="layoutDirection">
+             <enum>Qt::LayoutDirection::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored</enum>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>30</number>
+            </attribute>
+            <attribute name="horizontalHeaderHighlightSections">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>25</number>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>Valve 1 to 8</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 9 to 16</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 17 to 24</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 25 to 32</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 33 to 40</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 41 to 42</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>08</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>07</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>06</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>05</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>04</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>03</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>02</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>01</string>
+             </property>
+            </column>
+            <item row="0" column="0">
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QTableWidget" name="Response_Off_Time_TableWidget_2">
+            <property name="layoutDirection">
+             <enum>Qt::LayoutDirection::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored</enum>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>30</number>
+            </attribute>
+            <attribute name="horizontalHeaderHighlightSections">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>25</number>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>Valve 1 to 8</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 9 to 16</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 17 to 24</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 25 to 32</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 33 to 40</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 41 to 42</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>08</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>07</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>06</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>05</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>04</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>03</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>02</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>01</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QGroupBox" name="groupBox_4">
+       <property name="title">
+        <string>Valve Information</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <layout class="QGridLayout" name="gridLayout_4" rowstretch="1,6,1,6" columnstretch="1,1">
+          <property name="horizontalSpacing">
+           <number>20</number>
+          </property>
+          <item row="0" column="0" alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QLabel" name="label_14">
+            <property name="text">
+             <string>Valve Control</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QLabel" name="label_15">
+            <property name="text">
+             <string>Valve Readback</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QTableWidget" name="Valve_Control_TableWidget_3">
+            <property name="layoutDirection">
+             <enum>Qt::LayoutDirection::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored</enum>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>30</number>
+            </attribute>
+            <attribute name="horizontalHeaderHighlightSections">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>25</number>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>Valve 1 to 8</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 9 to 16</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 17 to 24</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 25 to 32</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 33 to 40</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 41 to 42</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>08</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>07</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>06</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>05</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>04</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>03</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>02</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>01</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QTableWidget" name="Valve_Readback_TableWidget_3">
+            <property name="layoutDirection">
+             <enum>Qt::LayoutDirection::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored</enum>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>30</number>
+            </attribute>
+            <attribute name="horizontalHeaderHighlightSections">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>25</number>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>Valve 1 to 8</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 9 to 16</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 17 to 24</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 25 to 32</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 33 to 40</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 41 to 42</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>08</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>07</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>06</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>05</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>04</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>03</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>02</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>01</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="2" column="0" alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QLabel" name="label_16">
+            <property name="text">
+             <string>DI/DO response ON time</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QLabel" name="label_17">
+            <property name="text">
+             <string>DI/DO response OFF time</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QTableWidget" name="Response_On_Time_TableWidget_3">
+            <property name="layoutDirection">
+             <enum>Qt::LayoutDirection::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored</enum>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>30</number>
+            </attribute>
+            <attribute name="horizontalHeaderHighlightSections">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>25</number>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>Valve 1 to 8</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 9 to 16</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 17 to 24</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 25 to 32</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 33 to 40</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 41 to 42</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>08</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>07</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>06</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>05</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>04</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>03</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>02</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>01</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QTableWidget" name="Response_Off_Time_TableWidget_3">
+            <property name="layoutDirection">
+             <enum>Qt::LayoutDirection::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored</enum>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>30</number>
+            </attribute>
+            <attribute name="horizontalHeaderHighlightSections">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>25</number>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>Valve 1 to 8</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 9 to 16</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 17 to 24</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 25 to 32</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 33 to 40</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Valve 41 to 42</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>08</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>07</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>06</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>05</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>04</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>03</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>02</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>01</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,10,1,1,1">
+     <item>
+      <spacer name="horizontalSpacer_9">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="title">
+        <string>Auto Test</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="4,1,3,1,10">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <layout class="QGridLayout" name="gridLayout" rowstretch="1,1,1,1" columnstretch="1,1">
+            <item row="0" column="1" alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QLineEdit" name="Next_Step_textBox">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="text">
+               <string>500</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1" alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QLineEdit" name="Max_Response_textBox">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="text">
+               <string>50</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>Max Response Time (ms)</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>Next Step Time (ms)</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>Verify Steps</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1" alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QLineEdit" name="Verify_Step_textBox">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="text">
+               <string>500</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+             <widget class="QLabel" name="Valve_Test_label">
+              <property name="text">
+               <string>Valve Test</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1" alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QLineEdit" name="Valve_Test_textBox">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>60</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,1,1,2,1">
+          <item>
+           <widget class="QRadioButton" name="Sequential_radioButton">
+            <property name="text">
+             <string>Sequential</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Random_radioButton">
+            <property name="text">
+             <string>Random</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Manual_radioButton">
+            <property name="text">
+             <string>Manual</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="Start_Test_button">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>10</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>Start Test</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Orientation::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>59</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_6" rowstretch="1,50" columnstretch="1,4,1,4">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>Status</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>Current Step:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="Current_Step_textBox"/>
+          </item>
+          <item row="1" column="0" colspan="4">
+           <widget class="QPlainTextEdit" name="Status_textBox"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_7">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_6" stretch="2,3,2">
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Chart View</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_8">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

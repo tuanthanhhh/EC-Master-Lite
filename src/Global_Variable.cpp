@@ -1,3 +1,6 @@
 #include "Global_Variable.h"
 
 QVector<QString> Adapter_available;
+int EC_MAILBOX_REQUEST_TIMEOUT[EC_MAXSLAVE] = {100};
+int EC_MAILBOX_RESPONSE_TIMEOUT[EC_MAXSLAVE] = {2000};
+int EC_LINKDETECT_PORTB_TIMEOUT[EC_MAXSLAVE] = {1000};
