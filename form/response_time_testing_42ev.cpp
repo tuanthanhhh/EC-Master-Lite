@@ -1418,7 +1418,7 @@ void response_time_testing_42ev::check_time_response(int valve, int valve_bit)
                         logStatus(QString("Slave %1 - Valve %2: Response OFF time %3ms").arg(slave2_test).arg(valve * 8 + valve_bit + 1).arg(QString::number(timeElapsed,'f',2)));
                     }
                 }
-                if(complete_test_1 == true && complete_test_2 == true && complete_test_3 == true)
+                if(complete_test_1 == true && complete_test_2 == true && complete_test_3 == true || timeElapsed > 2000)
                 {
                     return;
                 }

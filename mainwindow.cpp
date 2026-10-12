@@ -42,11 +42,14 @@ void MainWindow::on_Start_Test_button_clicked()
 
     QStringList list_err;
     QString err;
-    if(SerialNumber_str.length() != 9)
+    if(ui->Write_Serial_Number_checkBox->isChecked())
     {
-        err = "- Invalid serial number format. Expected decimal format: WW YY XXXXX";
-        list_err << err;
-        error_flag = true;
+    if(SerialNumber_str.length() != 9)
+        {
+            err = "- Invalid serial number format. Expected decimal format: WW YY XXXXX";
+            list_err << err;
+            error_flag = true;
+        }
     }
 
     if(address_sw.startsWith("0x",Qt::CaseInsensitive))
@@ -55,11 +58,14 @@ void MainWindow::on_Start_Test_button_clicked()
     }
     bool ok;
     uint16_t address_sw_value = address_sw.toUShort(&ok,16);
-    if(ok == false || address_sw_value > 0xFFF)
+    if(ui->Check_Address_checkBox->isChecked())
     {
-        err = "- Invalid Address format. Expected decimal format: 0xAAA or AAA";
-        list_err << err;
-        error_flag = true;
+        if(ok == false || address_sw_value > 0xFFF)
+        {
+            err = "- Invalid Address format. Expected decimal format: 0xAAA or AAA";
+            list_err << err;
+            error_flag = true;
+        }
     }
 
     if(error_flag == true)
@@ -69,6 +75,8 @@ void MainWindow::on_Start_Test_button_clicked()
     }
     QString timestamp = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss");
     ui->Start_Test_Time_textBox->setText(timestamp);
+    ui->End_Test_Time_textBox->setText("-");
+    ui->Test_Duration_textBox->setText("-");
     ui->Result_Test_textBox->setText("RUNNING");
     ui->Test_Status_Icon->clear();
     ui->Check_Address_Icon->clear();
@@ -266,6 +274,7 @@ void MainWindow::Run_Next_Test()
         QDateTime startTime = QDateTime::fromString(ui->Start_Test_Time_textBox->text(),format);
         QString timestamp = endTime.toString("yyyy-MM-dd HH:mm:ss");
         ui->End_Test_Time_textBox->setText(timestamp);
+        logStatusMessage("All selected tests completed.");
 
         if(startTime.isValid() && endTime.isValid())
         {
@@ -281,12 +290,15 @@ void MainWindow::Run_Next_Test()
         {
             ui->Result_Test_textBox->setText("PASS");
             ui->Test_Status_Icon->setPixmap(QPixmap(":/img/img/check.png").scaled(44,44,Qt::KeepAspectRatio, Qt::SmoothTransformation));
+            logStatusMessage("Overall Test Result: PASS.");
         }
         else
         {
             ui->Result_Test_textBox->setText("FAIL");
             ui->Test_Status_Icon->setPixmap(QPixmap(":/img/img/Error.png").scaled(44,44,Qt::KeepAspectRatio, Qt::SmoothTransformation));
+            logStatusMessage("Overall Test Result: FAIL.");
         }
+        logStatusMessage("===============================");
         break;
     }
 }
@@ -304,7 +316,7 @@ bool MainWindow::Run_ECAT_IN_Test()
     ui->Product_Code_1_textBox->setText(QString::fromUtf8(slave_info_xml[0].product_code));
     ui->Vendor_ID_1_textBox->setText(QString::fromUtf8(slave_info_xml[0].vendor_id));
     ui->Serial_Number_1_textBox->setText(QString::fromUtf8(slave_info_xml[0].serial_number));
-    ui->Rev_Number_1_textBox->setText(QString::fromUtf8(slave_info[0].revision_number));
+    ui->Rev_Number_1_textBox->setText(QString::fromUtf8(slave_info_xml[0].revision_number));
     ui->Software_Ver_1_textBox->setText(QString::fromUtf8(slave_info[0].software_ver));
     ui->Hardware_Ver_1_textBox->setText(QString::fromUtf8(slave_info[0].hardware_ver));
 
@@ -342,6 +354,7 @@ bool MainWindow::Run_ECAT_IN_Test()
     uint8_t Rx_err_0, Rx_err_1;
     uint8_t Forw_err_0,Forw_err_1;
     uint8_t link_lost_0, link_lost_1;
+    reset_Error_Counter();
 
     value_register = ecx_FPRDw(&ctx.port,ctx.slavelist[1].configadr, ECT_REG_RXERR, EC_TIMEOUTRET3);
     Rx_err_0 = (value_register >> 8) & 0xFF;
@@ -381,7 +394,7 @@ void MainWindow::Run_ECAT_OUT_Test()
             ui->Product_Code_2_textBox->setText(QString::fromUtf8(slave_info_xml[1].product_code));
             ui->Vendor_ID_2_textBox->setText(QString::fromUtf8(slave_info_xml[1].vendor_id));
             ui->Serial_Number_2_textBox->setText(QString::fromUtf8(slave_info_xml[1].serial_number));
-            ui->Rev_Number_2_textBox->setText(QString::fromUtf8(slave_info[1].revision_number));
+            ui->Rev_Number_2_textBox->setText(QString::fromUtf8(slave_info_xml[1].revision_number));
             ui->Software_Ver_2_textBox->setText(QString::fromUtf8(slave_info[1].software_ver));
             ui->Hardware_Ver_2_textBox->setText(QString::fromUtf8(slave_info[1].hardware_ver));
             ui->Ecat_Out_Icon->setPixmap(QPixmap(":/img/img/check.png").scaled(16,16,Qt::KeepAspectRatio, Qt::SmoothTransformation));
@@ -548,6 +561,32 @@ void MainWindow::Result_ResponseTimeTesting(QString status)
         // currentTest = NUM_OF_TEST;
         // Is_FinalTest_Pass = false;
     }
+}
+
+void MainWindow::reset_Error_Counter()
+{
+    ecx_FPWRw(&ctx.port, ctx.slavelist[1].configadr, ECT_REG_EPUECNT, 0, EC_TIMEOUTRET3);
+
+    ecx_FPWRw(&ctx.port, ctx.slavelist[1].configadr, ECT_REG_RXERR, 0, EC_TIMEOUTRET3);
+    ecx_FPWRw(&ctx.port, ctx.slavelist[1].configadr, ECT_REG_RXERR + 2, 0, EC_TIMEOUTRET3);
+    ecx_FPWRw(&ctx.port, ctx.slavelist[1].configadr, ECT_REG_RXERR + 4, 0, EC_TIMEOUTRET3);
+    ecx_FPWRw(&ctx.port, ctx.slavelist[1].configadr, ECT_REG_RXERR + 6, 0, EC_TIMEOUTRET3);
+
+    ecx_FPWRw(&ctx.port, ctx.slavelist[1].configadr, ECT_REG_FRXERR, 0, EC_TIMEOUTRET3);
+    ecx_FPWRw(&ctx.port, ctx.slavelist[1].configadr, ECT_REG_FRXERR + 2, 0, EC_TIMEOUTRET3);
+
+    ecx_FPWRw(&ctx.port, ctx.slavelist[1].configadr, ECT_REG_LLCNT, 0, EC_TIMEOUTRET3);
+    ecx_FPWRw(&ctx.port, ctx.slavelist[1].configadr, ECT_REG_LLCNT + 2, 0, EC_TIMEOUTRET3);
+
+
+    ui->Rx_Error_Slave1_textBox->setText("0");
+    ui->Rx_Error_Slave2_textBox->setText("0");
+
+    ui->Forw_Error_Slave1_textBox->setText("0");
+    ui->Forw_Error_Slave2_textBox->setText("0");
+
+    ui->Link_Lost_Slave1_textBox->setText("0");
+    ui->Link_Lost_Slave2_textBox->setText("0");
 }
 
 void MainWindow::Hot_Connect()
@@ -885,6 +924,19 @@ void MainWindow::logStatusMessage(QString msg)
 void MainWindow::closeEvent(QCloseEvent *event)
 {
     responseTime42EVTest->close();
+    if (Is_ECAT_Init == true)
+    {
+        ctx.slavelist[0].state = EC_STATE_INIT;
+        ecx_writestate(&ctx,0);
+        ecx_statecheck(&ctx,0,EC_STATE_INIT,EC_TIMEOUTSTATE);
+
+        for(int i = 1; i <= ctx.slavecount; i++)
+        {
+            slave_state_request[i] = EC_STATE_INIT;
+        }
+    }
+    Is_stop_thread = true;
+    Is_ECAT_Init = false;
 }
 
 
@@ -908,6 +960,10 @@ void MainWindow::on_Stop_Test_button_clicked()
     // responseTime42EVTest->close();
     ui->Result_Test_textBox->setText("READY");
     ui->Test_Status_Icon->clear();
+    ui->State_Slave1_textBox->setText("INIT");
+    ui->Link_State_Slave1_textBox->setText("Disconnected");
+    ui->State_Slave2_textBox->setText("INIT");
+    ui->Link_State_Slave2_textBox->setText("Disconnected");
 }
 
 

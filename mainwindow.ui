@@ -6,12 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>857</width>
-    <height>799</height>
+    <width>1024</width>
+    <height>768</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Manifold 42EV</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource_icon.qrc">
+    <normaloff>:/img/img/Ecat.ico</normaloff>:/img/img/Ecat.ico</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -401,7 +405,7 @@ QFrame#infoFrame {
                 </size>
                </property>
                <property name="text">
-                <string>0xFFF</string>
+                <string/>
                </property>
               </widget>
              </item>
@@ -490,7 +494,7 @@ QFrame#infoFrame {
                 </size>
                </property>
                <property name="text">
-                <string>342600001</string>
+                <string/>
                </property>
               </widget>
              </item>
@@ -1046,7 +1050,7 @@ QFrame#infoFrame {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>857</width>
+     <width>1024</width>
      <height>21</height>
     </rect>
    </property>

@@ -55,6 +55,7 @@ private:
     void Run_On_Off_Valve_Test();
     void Result_WriteSerialNumber_Test(QString actual, QString expect, bool Is_writed);
     void Result_ResponseTimeTesting(QString status);
+    void reset_Error_Counter();
 
 private:
     response_time_testing_42ev *responseTime42EVTest;

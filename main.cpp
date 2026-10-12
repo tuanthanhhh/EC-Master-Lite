@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     QApplication::setStyle(QStyleFactory::create("Fusion"));
     a.setWindowIcon(QIcon(":/icons/img/Ecat.ico"));
     QCoreApplication::setOrganizationName("Fab9_EMS");
-    QCoreApplication::setApplicationName("EC Master Lite");
+    QCoreApplication::setApplicationName("Manifold 42EV");
 
     MainWindow w;
     w.FormInit();

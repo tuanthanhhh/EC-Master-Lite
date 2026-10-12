@@ -137,6 +137,12 @@ else()
     endif()
 endif()
 
+if(WIN32)
+    target_sources(EC_Master_Lite PRIVATE
+        "${CMAKE_CURRENT_SOURCE_DIR}/appicon.rc"
+    )
+endif()
+
 target_link_libraries(EC_Master_Lite PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport)
 
 link_directories("C:/Program Files/Npcap/Lib/x64")
@@ -160,6 +166,7 @@ set_target_properties(EC_Master_Lite PROPERTIES
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
+    OUTPUT_NAME "Manifold 42EV"
 )
 
 include(GNUInstallDirs)

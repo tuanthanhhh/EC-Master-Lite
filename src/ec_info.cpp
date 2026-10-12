@@ -53,13 +53,13 @@ void readXMLFile(const std::string& filePath)
             VendorID->QueryIntText(&Value);
 
 
-            sprintf((char*)slave_info_xml[slave_count].vendor_id, "0x%X ", Value);
+            sprintf((char*)slave_info_xml[slave_count].vendor_id, "0x%02X ", Value);
             ProductCode->QueryIntText(&Value);
-            sprintf((char*)slave_info_xml[slave_count].product_code, "0x%X", Value);
+            sprintf((char*)slave_info_xml[slave_count].product_code, "0x%02X", Value);
             RevNumber->QueryIntText(&Value);
-            sprintf((char*)slave_info_xml[slave_count].revision_number, "0x%X", Value);
+            sprintf((char*)slave_info_xml[slave_count].revision_number, "0x%02X", Value);
             SerialNumber->QueryIntText(&Value);
-            sprintf((char*)slave_info_xml[slave_count].serial_number, "0x%X", Value);
+            sprintf((char*)slave_info_xml[slave_count].serial_number, "0x%02X", Value);
 
             memcpy((char*)slave_info_xml[slave_count].slave_name, SlaveName->GetText(), strlen(SlaveName->GetText()));
 
